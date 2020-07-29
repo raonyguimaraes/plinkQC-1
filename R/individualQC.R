@@ -1989,9 +1989,9 @@ evaluate_check_ancestry <- function(indir, name, prefixMergedDataset,
     p_ancestry <- ggplot()
     p_ancestry <- p_ancestry +
         geom_point(data=data_all,
-                   aes_string(x='PC1', y='PC2', color='Pop')) +
+                   aes_string(x='PC1', y='PC3', color='Pop')) +
         geom_point(data=dplyr::filter_(data_all, ~Pop != name),
-                   aes_string(x='PC1', y='PC2', color='Pop'),
+                   aes_string(x='PC1', y='PC3', color='Pop'),
                    size=1) +
         scale_color_manual(values=colors$Color,
                            name="Population") +
